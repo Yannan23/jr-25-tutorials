@@ -2,6 +2,19 @@ const express = require('express');
 const router = new express.Router();
 const articlesController = require('../../controllers/aritclesController')
 
-router.get('/', articlesController.index);
+//get all
+router.get('/articles', articlesController.index);
+
+//get one
+router.get('/articles/:id', articlesController.show);
+
+//update one
+router.put('/articles/:id', articlesController.update);
+
+//delete one
+router.delete('/articles/:id', articlesController.destroy);
+
+//create one
+router.create('/articles', articlesController.store);
 
 module.exports = router;
