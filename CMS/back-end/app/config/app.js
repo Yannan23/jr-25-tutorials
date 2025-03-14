@@ -7,7 +7,6 @@ module.exports = {
     api: {
         prefix: process.env.prefix ?? "/api/v1",
     },
-    db: {
-        uri: process.env.MONGODB_URL || "mongodb://localhost:27017/cms",
-    }
+    dbUrl: process.env.MONDODB_URL
+
 }

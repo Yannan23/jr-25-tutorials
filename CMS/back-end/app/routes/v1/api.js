@@ -6,15 +6,16 @@ const articlesController = require('../../controllers/aritclesController')
 router.get('/articles', articlesController.index);
 
 //get one
-router.get('/articles/:id', articlesController.show);
+router.get('/articles/:id', articlesController.show)
 
 //update one
-router.put('/articles/:id', articlesController.update);
+router.put('/articles/:id', articlesController.update)
 
 //delete one
-router.delete('/articles/:id', articlesController.destroy);
+router.delete('/articles/:id', articlesController.destroy)
 
 //create one
-router.create('/articles', articlesController.store);
+router.post('/articles', articlesController.store)
+
 
 module.exports = router;
