@@ -17,6 +17,7 @@ const startServer = () => {
 
 module.exports = () => {
     const app = startServer();
+    app.use(express.json());
     app.use(config.api.prefix, apiRouter);
     return app;
 }

@@ -1,12 +1,16 @@
 const expressloader = require('./express')
+const mongooseLoader = require('./mongoose')
 
 const init = () => {
     //init express
-    //init dbConnection(mongoose)
     const expressApp = expressloader();
-    return { expressApp }
+
+    //init dbConnection(mongoose)
+    const dbConnection = mongooseLoader();
+    return { expressApp, dbConnection }
 }
 
-const { expressApp } = init()
+const { expressApp, dbConnection } = init()
 //export
 exports.express = expressApp;
+exports.dbConnection = dbConnection;

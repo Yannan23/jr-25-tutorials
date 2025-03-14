@@ -6,5 +6,6 @@ module.exports = {
     port: process.env.PORT,
     api: {
         prefix: process.env.prefix ?? "/api/v1",
-    }
+    },
+    dbUrl: process.env.MONDODB_URL
 }
