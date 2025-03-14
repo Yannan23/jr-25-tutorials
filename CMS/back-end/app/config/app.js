@@ -8,4 +8,5 @@ module.exports = {
         prefix: process.env.prefix ?? "/api/v1",
     },
     dbUrl: process.env.MONDODB_URL
+
 }
