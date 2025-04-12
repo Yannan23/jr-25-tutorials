@@ -17,5 +17,5 @@ router.delete('/articles/:id', articlesController.destroy)
 //create one
 router.post('/articles', articlesController.store)
 
-
+// router.post('/register', registerController.register)
 module.exports = router;
